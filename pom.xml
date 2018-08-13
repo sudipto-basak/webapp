@@ -25,7 +25,7 @@
 		<spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
 		<build.finalName>app</build.finalName>
 		<docker.imageName>webapp</docker.imageName>
-		<docker.registry-host>ip-10-254-3-234.ec2.internal</docker.registry-host>
+		<docker.registry-host>ip-10-254-4-172.ec2.internal</docker.registry-host>
 		<docker.registry-port>5000</docker.registry-port>
 	</properties>
 
@@ -98,7 +98,6 @@
 				<version>0.26.0</version>
 
 				<configuration>
-					<dockerHost>https://localhost:2376</dockerHost>
 					<registry>${docker.registry-host}:${docker.registry-port}</registry>
 					<images>
 						<image>
