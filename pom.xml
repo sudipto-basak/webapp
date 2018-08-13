@@ -98,6 +98,7 @@
 				<version>0.26.0</version>
 
 				<configuration>
+					<dockerHost>https://localhost:2376</dockerHost>
 					<registry>${docker.registry-host}:${docker.registry-port}</registry>
 					<images>
 						<image>
@@ -111,17 +112,6 @@
 						</image>
 					</images>
 				</configuration>
-
-				<executions>
-					<execution>
-						<id>buildAndPush</id>
-						<phase>prepare-package</phase>
-						<goals>
-							<goal>build</goal>
-							<goal>push</goal>
-						</goals>
-					</execution>
-				</executions>
 
 			</plugin>
 		</plugins>
