@@ -102,10 +102,12 @@
 					<images>
 						<image>
 							<name>${docker.registry-host}:${docker.registry-port}/${docker.imageName}:latest</name>
-							<dockerFileDir>${project.basedir}/src/main/docker</dockerFileDir>
-							<assembly>
-								<descriptorRef>artifact</descriptorRef>
-							</assembly>
+							<build>
+								<dockerFileDir>${project.basedir}/src/main/docker</dockerFileDir>
+								<assembly>
+									<descriptorRef>artifact</descriptorRef>
+								</assembly>
+							</build>
 						</image>
 					</images>
 				</configuration>
