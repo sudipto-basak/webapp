@@ -13,4 +13,4 @@ COPY maven/ /opt/microservices/lib/
 ENTRYPOINT ["sh"]
 CMD [ "-c","/opt/microservices/scripts/entrypoint.sh"]
 #CMD [ "-c",  "java $JAVA_OPTS  -jar /opt/microservices/lib/app.jar"]
-EXPOSE 11000
+#EXPOSE 11000
