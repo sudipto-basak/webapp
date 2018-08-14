@@ -25,6 +25,7 @@
 		<spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
 		<build.finalName>app</build.finalName>
 		<docker.imageName>webapp</docker.imageName>
+		<docker.imageVersion>1.0</docker.imageVersion>
 		<!--<docker.registry-host>ip-10-254-4-172.ec2.internal</docker.registry-host>-->
 		<!--<docker.registry-port>5000</docker.registry-port>-->
 		<!--<docker-registry-url>192.168.99.107:8081</docker-registry-url>-->
@@ -103,7 +104,7 @@
 					<images>
 						<image>
 							<!--<name>${docker-registry-url}/${docker.imageName}:latest</name>-->
-							<name>${docker.imageName}:latest</name>
+							<name>${docker.imageName}:${docker.imageVersion}</name>
 							<build>
 								<dockerFileDir>${project.basedir}/src/main/docker</dockerFileDir>
 								<assembly>
