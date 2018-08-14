@@ -12,8 +12,8 @@ COPY maven/ /opt/WDN/lib/
 #VOLUME  /opt/WDN
 
 #ENV JAVA_OPTS="-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap  -XX:MaxRAMFraction=1 -XshowSettings:vm -Dspring.profiles.active=docker"
-ENV JAVA_OPTS="-Xms128m -Xmx512m -XshowSettings:vm -Dspring.profiles.active=local"
+#ENV JAVA_OPTS="-Xms128m -Xmx512m -XshowSettings:vm -Dspring.profiles.active=local"
+
 ENTRYPOINT ["sh"]
-#CMD [ "-c","/opt/WDN/scripts/entrypoint.sh"]
-CMD [ "-c",  "java $JAVA_OPTS  -jar /opt/WDN/lib/app.jar"]
-#EXPOSE 11000
+CMD [ "-c","/opt/WDN/scripts/entrypoint.sh"]
+#CMD [ "-c",  "java $JAVA_OPTS  -jar /opt/WDN/lib/app.jar"]

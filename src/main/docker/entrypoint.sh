@@ -23,7 +23,7 @@ export PROCEED_FLAG=Y
 if [ ${PROCEED_FLAG} == "Y" ]
 then
     echo "Found both discovery and config service .. proceeding"
-    export JAVA_OPTS="-Xms128m -Xmx256m -XshowSettings:vm -Dspring.profiles.active=local"
+    export JAVA_OPTS="-Xms128m -Xmx512m -XshowSettings:vm -Dspring.profiles.active=local"
     java $JAVA_OPTS -jar /opt/WDN/lib/app.jar
 else
     echo "Discovery not found within time .. exiting"
