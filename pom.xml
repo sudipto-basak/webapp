@@ -25,8 +25,9 @@
 		<spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
 		<build.finalName>app</build.finalName>
 		<docker.imageName>webapp</docker.imageName>
-		<docker.registry-host>ip-10-254-4-172.ec2.internal</docker.registry-host>
-		<docker.registry-port>5000</docker.registry-port>
+		<!--<docker.registry-host>ip-10-254-4-172.ec2.internal</docker.registry-host>-->
+		<!--<docker.registry-port>5000</docker.registry-port>-->
+		<docker-registry-url>http://192.168.99.107:8081/repository/docker-group/</docker-registry-url>
 	</properties>
 
 	<dependencies>
@@ -98,10 +99,10 @@
 				<version>0.26.0</version>
 
 				<configuration>
-					<registry>${docker.registry-host}:${docker.registry-port}</registry>
+					<registry>${docker-registry-url}</registry>
 					<images>
 						<image>
-							<name>${docker.registry-host}:${docker.registry-port}/${docker.imageName}:latest</name>
+							<name>${docker-registry-url}/${docker.imageName}:latest</name>
 							<build>
 								<dockerFileDir>${project.basedir}/src/main/docker</dockerFileDir>
 								<assembly>
