@@ -27,7 +27,7 @@
 		<docker.imageName>webapp</docker.imageName>
 		<!--<docker.registry-host>ip-10-254-4-172.ec2.internal</docker.registry-host>-->
 		<!--<docker.registry-port>5000</docker.registry-port>-->
-		<docker-registry-url>http://192.168.99.107:8081/repository/docker-group/</docker-registry-url>
+		<docker-registry-url>192.168.99.107:8081</docker-registry-url>
 	</properties>
 
 	<dependencies>
