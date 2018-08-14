@@ -9,7 +9,7 @@ RUN dos2unix /opt/WDN/scripts/entrypoint.sh
 
 COPY maven/ /opt/WDN/lib/
 
-VOLUME  /opt/WDN
+#VOLUME  /opt/WDN
 
 #ENV JAVA_OPTS="-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap  -XX:MaxRAMFraction=1 -XshowSettings:vm -Dspring.profiles.active=docker"
 ENV JAVA_OPTS="-Xms128m -Xmx512m -XshowSettings:vm -Dspring.profiles.active=local"
